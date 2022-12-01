@@ -7,7 +7,7 @@ import json
 def PlaceList(request):
     queryset = Place.objects.all()
     context = list(queryset.values('id',"name"))
-    return JsonResponse(context, safe=false)
+    return JsonResponse(context, safe=False)
 
 def PlaceCreate(request):
     if request.method == 'POST':
